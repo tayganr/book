@@ -1,0 +1,1592 @@
+body {
+  font-family: Tahoma, Arial;
+  background-color: #1B1B1B;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  overflow: hidden;
+  margin: 0px;
+}
+iframe {
+  border: 0px;
+  margin: 0px;
+}
+#yudu_backgroundLoadCover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1B1B1B;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 2100;
+}
+#yudu_reader {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  touch-action: none;
+  z-index: 0;
+}
+.backgroundTiling {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: table;
+  background-image: url("../resources/artwork/background_tile.png");
+}
+#yudu_readerBackgroundTiling {
+  z-index: -1;
+}
+#errorCover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1B1B1B;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 20000;
+}
+#errorCover #criticalFail {
+  display: block;
+  position: absolute;
+  top: 50%;
+  height: 400px;
+  line-height: 400px;
+  margin-top: -200px;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  color: #ffffff;
+}
+#yudu_toolbarTop,
+#yudu_toolbarLeft {
+  top: 0px;
+  left: 0px;
+}
+#yudu_toolbarBottom,
+#yudu_toolbarRight {
+  bottom: 0px;
+  right: 0px;
+}
+#yudu_toolbarTop {
+  right: 0px;
+}
+#yudu_toolbarTop.touchDevice.hide {
+  top: -50px;
+}
+#yudu_toolbarLeft {
+  bottom: 0px;
+}
+#yudu_toolbarLeft.touchDevice.hide {
+  left: -50px;
+}
+#yudu_toolbarBottom {
+  left: 0px;
+}
+#yudu_toolbarBottom.touchDevice.hide {
+  bottom: -50px;
+}
+#yudu_toolbarRight {
+  top: 0px;
+}
+#yudu_toolbarRight.touchDevice.hide {
+  right: -50px;
+}
+.yudu_toolbarContainer {
+  z-index: 2000;
+  position: absolute;
+}
+.yudu_toolbarContainer.touchDevice {
+  position: fixed;
+}
+#yudu_userPreferences {
+  padding: 5px;
+  border: solid 1px #333;
+  background-color: #f2f4f4;
+  position: absolute;
+  top: 34px;
+  left: 0;
+  display: none;
+}
+#yudu_userPreferences div {
+  display: table-cell;
+  padding-right: 10px;
+}
+.closeControl {
+  border: none;
+  background: transparent no-repeat center;
+  background-size: contain;
+  outline: none;
+  position: absolute;
+  padding: 0px;
+}
+#yudu_infoFrame {
+  z-index: 2200;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  border: 0px none transparent;
+  padding: 0px;
+}
+.yudu_rollover {
+  border: solid 1px black;
+  overflow: hidden;
+  background-color: #f2f4f4;
+  position: absolute;
+}
+.yudu_arrow {
+  border: solid transparent;
+  border-color: rgba(255, 255, 255, 0);
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  pointer-events: none;
+}
+#yudu_shareBackground,
+#yudu_loginBackground,
+#yudu_messageBackground,
+#yudu_lightboxBackground,
+#yudu_mobileSearchBackground,
+#yudu_orderFormBackground,
+#yudu_dataCollectionBackground {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2100;
+  display: none;
+  overflow: hidden;
+}
+#yudu_emailShareContainer {
+  font-size: 0.9em;
+  position: relative;
+  background-color: rgba(250, 250, 250, 0.9);
+  padding: 10px;
+  z-index: 2101;
+  border-radius: 0px 0px 5px 5px;
+  overflow: hidden;
+  display: none;
+  max-width: 400px;
+  margin: 0 auto;
+  top: -10px;
+}
+#yudu_emailShareContainer #yudu_emailInputs {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+#yudu_emailShareContainer #yudu_emailInputs input {
+  font-size: 13px;
+  width: -webkit-calc(100% - 10px);
+  width: calc(100% - 10px);
+  height: 27px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  padding: 4px;
+  line-height: 18px;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  border-radius: 3px 3px 3px 3px;
+}
+#yudu_emailShareContainer #yudu_emailInputs .yudu_inputContainer {
+  margin: 5px 10px;
+}
+#yudu_emailShareContainer #yudu_emailInputs input:focus {
+  border-color: rgba(0, 160, 234, 0.8);
+  border-width: 1px;
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  outline: 0 none;
+}
+#yudu_emailShareContainer #yudu_emailInputs label {
+  margin-right: 15px;
+}
+#yudu_emailShareContainer #yudu_comments {
+  padding: 0px 10px;
+  margin: 0px;
+  margin-top: 20px;
+}
+#yudu_emailShareContainer #yudu_comments #yudu_comment {
+  resize: none;
+  font-size: 13px;
+  width: -webkit-calc(100% - 10px);
+  width: calc(100% - 10px);
+  height: auto;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  padding: 4px;
+  line-height: 18px;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 3px;
+}
+#yudu_emailShareContainer #yudu_comments #yudu_comment:focus {
+  border-color: rgba(0, 160, 234, 0.8);
+  border-width: 1px;
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  outline: 0 none;
+}
+#yudu_emailShareContainer button {
+  margin: 0;
+  padding: 0;
+}
+#yudu_emailShareContainer #yudu_emailButtons {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-size: 0;
+}
+#yudu_emailShareContainer #yudu_emailButtons .yudu_emailButton {
+  height: 3em;
+  color: #3c3c3c;
+  border: 0;
+  line-height: 1.33;
+  display: inline-block;
+  width: -webkit-calc(50% - 13px);
+  width: calc(50% - 13px);
+  margin: 0;
+  cursor: pointer;
+}
+#yudu_emailShareContainer #yudu_emailButtons #yudu_emailCancel {
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-right: 3px;
+}
+#yudu_emailShareContainer #yudu_emailButtons #yudu_emailSend {
+  background-color: #428bca;
+  color: #fff;
+  border-radius: 6px;
+  margin-left: 3px;
+}
+#yudu_emailShareContainer #yudu_emailButtons #yudu_emailCancel:hover {
+  background-color: #ebebeb;
+  border: 1px solid #ccc;
+}
+#yudu_emailShareContainer #yudu_emailButtons #yudu_emailSend:hover {
+  background-color: #3276b1;
+}
+#yudu_loginPrompt {
+  font: 0.9em arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+  top: -10px;
+  background-color: rgba(250, 250, 250, 0.9);
+  z-index: 2101;
+  border-radius: 0px 0px 5px 5px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  display: none;
+}
+#yudu_loginPrompt #yudu_loginExplanation {
+  text-align: left;
+  font-weight: bold;
+  padding: 4px;
+}
+#yudu_loginPrompt #yudu_loginInputs {
+  margin-top: 15px;
+  text-align: center;
+  display: inline-block;
+  width: 90%;
+}
+#yudu_loginPrompt #yudu_loginInputs input {
+  font-size: 13px;
+  width: -webkit-calc(100% - 10px);
+  width: calc(100% - 10px);
+  height: 40px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  padding: 4px;
+  line-height: 18px;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  border-style: solid;
+  border-color: #cccccc;
+}
+#yudu_loginPrompt #yudu_loginInputs #yudu_username {
+  border-width: 1px 1px 0px 1px;
+  border-radius: 3px 3px 0px 0px;
+}
+#yudu_loginPrompt #yudu_loginInputs #yudu_password {
+  border-width: 1px;
+  border-radius: 0px 0px 3px 3px;
+}
+#yudu_loginPrompt #yudu_loginInputs input:focus {
+  border-color: rgba(0, 160, 234, 0.8);
+  border-width: 1px;
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  outline: 0 none;
+}
+#yudu_loginPrompt #yudu_loginInputs .inputLabel {
+  margin-right: 15px;
+}
+#yudu_loginPrompt #yudu_password.noUsername {
+  border-radius: 3px !important;
+}
+#yudu_loginPrompt #yudu_loginResponse {
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 3px;
+  display: none;
+}
+#yudu_loginPrompt button {
+  margin: 0;
+  padding: 0;
+}
+#yudu_loginPrompt #yudu_loginButtons {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  text-align: center;
+  width: 100%;
+  font-size: 0;
+}
+#yudu_loginPrompt #yudu_loginButtons .yudu_loginButton {
+  padding: 11px;
+  color: #3c3c3c;
+  border: 0;
+  line-height: 1.33;
+  width: -webkit-calc(50% - 23px);
+  width: calc(50% - 23px);
+  margin: 0;
+  cursor: pointer;
+  height: 100%;
+  vertical-align: top;
+}
+#yudu_loginPrompt #yudu_loginButtons #yudu_resetPassword {
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-right: 3px;
+}
+#yudu_loginPrompt #yudu_loginButtons #yudu_loginSend {
+  background-color: #428bca;
+  border: 1px solid #428bca;
+  color: #fff;
+  border-radius: 6px;
+  margin-left: 3px;
+}
+#yudu_loginPrompt #yudu_loginButtons #yudu_resetPassword:hover {
+  background-color: #ebebeb;
+  border: 1px solid #ccc;
+}
+#yudu_loginPrompt #yudu_loginButtons #yudu_loginSend:hover {
+  background-color: #3276b1;
+}
+#yudu_loginPrompt .yudu_loginExtras {
+  text-align: right;
+  margin-top: 10px;
+  text-decoration: none;
+}
+#yudu_loginPrompt #yudu_loginSubscribe {
+  cursor: pointer;
+}
+#yudu_loginPrompt #yudu_loginSubscribe:hover {
+  opacity: 0.7;
+}
+#yudu_messageBox {
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+  top: -10px;
+  background-color: rgba(250, 250, 250, 0.9);
+  z-index: 2101;
+  border-radius: 0px 0px 5px 5px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  display: none;
+}
+#yudu_messageBox #yudu_message {
+  margin: 0 0 15px 0;
+  border-radius: 10px;
+  padding: 30px 0;
+}
+#yudu_messageBox #yudu_messageClose {
+  margin: 0;
+  padding: 0;
+  background-color: #428bca;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  width: 47%;
+  height: 3em;
+  line-height: 1.33;
+  cursor: pointer;
+}
+#yudu_messageBox #yudu_messageClose:hover {
+  background-color: #3276b1;
+}
+#yudu_messageBox #yudu_messageCancel {
+  margin: 0;
+  padding: 0;
+  background-color: #ca4242;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  width: 47%;
+  height: 3em;
+  line-height: 1.33;
+  cursor: pointer;
+  display: none;
+}
+#yudu_messageBox #yudu_messageCancel:hover {
+  background-color: #b13232;
+}
+#yudu_messageBox #yudu_messageOk {
+  margin: 0;
+  padding: 0;
+  background-color: #428bca;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  width: 47%;
+  height: 3em;
+  line-height: 1.33;
+  cursor: pointer;
+  display: none;
+}
+#yudu_messageBox #yudu_messageOk:hover {
+  background-color: #3276b1;
+}
+#yudu_messageBox.yudu_twoButton #yudu_messageClose {
+  display: none;
+}
+#yudu_messageBox.yudu_twoButton #yudu_messageCancel {
+  display: inline;
+}
+#yudu_messageBox.yudu_twoButton #yudu_messageOk {
+  display: inline;
+}
+.yudu_failure {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.yudu_success {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+.yudu_default {
+  background-color: rgba(220, 220, 220, 0.5);
+}
+.yudu_box-shadow {
+  box-shadow: 0px 0px 10px 1px #5c5c5c;
+}
+#yudu_desktopSearchResultsContainer {
+  position: absolute;
+  right: 0px;
+  width: 240px;
+  background-color: rgba(250, 250, 250, 0.9);
+  display: none;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  z-index: 1900;
+  border-radius: 0px 0px 5px 5px;
+  padding: 0px;
+  overflow: hidden;
+}
+#yudu_desktopSearchResultsContainer #yudu_desktopSearchResultsList {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  height: 230px;
+  display: none;
+}
+#yudu_desktopSearchResultsContainer #yudu_closeSearchResults {
+  position: relative;
+  width: 100px;
+  line-height: 1.33;
+  margin: 10px auto;
+  color: #3c3c3c;
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: block;
+  cursor: pointer;
+  padding: 5px;
+}
+#yudu_desktopSearchResultsContainer #yudu_closeSearchResults:hover {
+  background-color: #ebebeb;
+  border: 1px solid #ccc;
+}
+.yudu_noResults,
+.yudu_searching {
+  position: relative;
+  margin: 10px auto;
+  display: none;
+  text-align: center;
+}
+#yudu_mobileSearchText {
+  width: -webkit-calc(100% - 29px);
+  width: calc(100% - 29px);
+  padding: 5px 25px 5px 4px;
+}
+#yudu_mobileSearchContainer {
+  font-size: 0.9em;
+  position: relative;
+  background-color: white;
+  padding: 10px;
+  z-index: 2101;
+  box-shadow: 0px 0px 15px 0px black;
+  border-radius: 0px 0px 5px 5px;
+  overflow: hidden;
+  display: none;
+  max-width: 400px;
+  margin: 10px auto 0px auto;
+  top: -10px;
+}
+#yudu_mobileSearchContainer #yudu_mobileSearchBox {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#yudu_mobileSearchContainer #yudu_mobileSearchBox #yudu_mobileSearchGo {
+  top: 6px;
+  right: 2px;
+}
+#yudu_mobileSearchContainer #yudu_mobileSearchResultsContainer {
+  position: relative;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+}
+#yudu_mobileSearchContainer #yudu_mobileSearchResultsContainer #yudu_mobileSearchResultsList {
+  display: none;
+  margin-top: 10px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: 225px;
+}
+#yudu_mobileSearchContainer #yudu_mobileSearchResultsContainer #yudu_mobileSearchResultsList #yudu_iOSHelperContainer {
+  height: 100%;
+  max-height: 225px;
+  overflow-y: auto;
+}
+.yudu_searchText {
+  font-size: 13px;
+  width: 125px;
+  height: 20px;
+  padding: 1px 25px 1px 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  line-height: 18px;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  border-radius: 3px 3px 3px 3px;
+}
+.yudu_searchGo {
+  background: transparent no-repeat center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  border: 0px;
+  position: absolute;
+  vertical-align: middle;
+  outline: none;
+}
+.yudu_searchGo:hover {
+  cursor: pointer;
+}
+.yudu_searchResult {
+  position: relative;
+  width: 90%;
+  height: auto;
+  line-height: 14px;
+  margin: 5px auto;
+  padding: 5px 5px;
+  cursor: pointer;
+  border: 1px solid #baaaaa;
+  border-radius: 3px;
+  background-color: rgba(250, 250, 250, 0.9);
+}
+.yudu_searchResult .yudu_resultPage {
+  font-size: 13px;
+  margin-top: 0px;
+  margin-bottom: 0.5em;
+}
+.yudu_searchResult .yudu_resultText {
+  font-size: 11px;
+  margin: 0px;
+  height: 28px;
+  overflow: hidden;
+}
+.yudu_searchResult .yudu_resultText .yudu_hitText {
+  color: #46CB18;
+}
+.yudu_searchButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+.yudu_searchButton {
+  background-color: #fefefe;
+  color: #3c3c3c;
+  position: relative;
+  width: 100px;
+  line-height: 1.33;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: block;
+  cursor: pointer;
+  padding: 5px;
+}
+.yudu_activeSearchButton {
+  background-color: #558ac5;
+  color: #f6f6f6;
+}
+.yudu_searchButtonContainer button:first-child {
+  border-right: none;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.yudu_searchButtonContainer button:last-child {
+  border-left: none;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.yudu_clickThrough {
+  background-color: rgba(230, 250, 230, 0.9);
+}
+.yudu_throbberWrapper {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 50%;
+  left: 50%;
+  margin-top: -35px;
+  margin-left: -35px;
+  background-color: #FFFFFF;
+  border-radius: 14px;
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.yudu_throbber {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -24px;
+  margin-left: -24px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.yudu_throbber li {
+  position: absolute;
+  display: block;
+  border-radius: 14px;
+  background-color: #999;
+  width: 14px;
+  height: 14px;
+  margin-top: -7px;
+  margin-left: -7px;
+}
+.yudu_throbber li:nth-child(1) {
+  top: 0%;
+  left: 50%;
+}
+.yudu_throbber li:nth-child(2) {
+  top: 15%;
+  left: 85%;
+  opacity: 0.9;
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+.yudu_throbber li:nth-child(3) {
+  top: 50%;
+  left: 100%;
+  opacity: 0.8;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.yudu_throbber li:nth-child(4) {
+  top: 85%;
+  left: 85%;
+  opacity: 0.7;
+  -webkit-transform: scale(0.85);
+  transform: scale(0.85);
+}
+.yudu_throbber li:nth-child(5) {
+  top: 100%;
+  left: 50%;
+  opacity: 0.6;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+.yudu_throbber li:nth-child(6) {
+  top: 85%;
+  left: 15%;
+  opacity: 0.5;
+  -webkit-transform: scale(0.75);
+  transform: scale(0.75);
+}
+.yudu_throbber li:nth-child(7) {
+  top: 50%;
+  left: 0%;
+  opacity: 0.4;
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
+}
+.yudu_throbber li:nth-child(8) {
+  top: 15%;
+  left: 15%;
+  opacity: 0.3;
+  -webkit-transform: scale(0.65);
+  transform: scale(0.65);
+}
+#yudu_throbberImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75px;
+  height: 75px;
+  margin-top: -37.5px;
+  margin-left: -37.5px;
+  padding: 0;
+  -webkit-animation: rotate 1.5s infinite linear;
+  animation: rotate 1.5s infinite linear;
+}
+.yudu_lightboxContentContainer {
+  position: fixed;
+}
+.yudu_lightboxContentContainer .yudu_lightboxContent {
+  visibility: hidden;
+}
+#yudu_previousPageNav {
+  left: 0px;
+}
+#yudu_previousPageNav img {
+  left: 0px;
+}
+#yudu_nextPageNav {
+  right: 0px;
+}
+#yudu_nextPageNav img {
+  right: 0px;
+}
+.yudu_pageNav {
+  position: absolute;
+  top: 0px;
+  width: 10%;
+  height: 100%;
+  overflow: hidden;
+}
+.yudu_pageNav img {
+  position: absolute;
+}
+#yudu_orderFormContainer {
+  position: absolute;
+  top: 0px;
+  left: 1%;
+  width: 98%;
+}
+#yudu_orderForm {
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(250, 250, 250, 0.9);
+  z-index: 2101;
+  border-radius: 0px 0px 5px 5px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+  display: none;
+}
+#yudu_orderForm #yudu_orderFormTitle {
+  height: 20px;
+}
+#yudu_orderForm #yudu_emptyFormInfo {
+  margin-top: 10px;
+}
+#yudu_orderForm #yudu_postageInfo {
+  margin-top: 10px;
+  text-align: right;
+  display: none;
+}
+#yudu_orderForm #yudu_orderFormResponse {
+  margin: 5px 10px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 3px;
+  display: none;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  min-height: 40px;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_orderFormTable {
+  display: table;
+  padding: 0 10px 0 10px;
+  background-color: rgba(250, 250, 250, 0.9);
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  height: 100%;
+  overflow-y: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_orderFormTable #yudu_orderFormTableHeading {
+  display: table-row;
+  height: 40px;
+  font-weight: bold;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_orderFormTable #yudu_orderFormTableHeading #yudu_emptyOrderForm {
+  display: none;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_orderFormTable .yudu_orderFormTableRow {
+  display: table-row;
+  height: 40px;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_orderFormTable .yudu_orderFormTableCell {
+  display: table-cell;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_orderFormTable .yudu_orderFormTableCell .inputField {
+  width: 60%;
+  height: 1.2em;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_orderFormTable .yudu_orderFormTableCell .yudu_removeItem {
+  height: 2em;
+  width: 100%;
+  text-align: center;
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  line-height: 1.33;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_orderFormTable .yudu_orderFormTableCell .yudu_removeItem:hover {
+  background-color: #ebebeb;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_orderFormTable .yudu_orderFormTableCell.yudu_description {
+  width: 25%;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_orderFormTable .yudu_orderFormTableCell.yudu_removeButton {
+  width: 20%;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_orderFormTable #yudu_totalPriceRow {
+  font-weight: bold;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_deliveryDetailsTable {
+  display: table;
+  padding: 0 10px 0 10px;
+  background-color: rgba(250, 250, 250, 0.9);
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  height: 100%;
+  overflow-y: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_deliveryDetailsTable .yudu_deliveryDetailsTableRow {
+  display: table-row;
+  height: 40px;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_deliveryDetailsTable .yudu_deliveryDetailsTableCell {
+  display: table-cell;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: middle;
+  width: 25%;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_deliveryDetailsTable #yudu_deliveryDetailsAdditionalInformation {
+  resize: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+}
+#yudu_orderForm #yudu_orderFormTableWrapper #yudu_deliveryDetailsTable #yudu_customUserFieldRow {
+  display: none;
+}
+#yudu_orderForm button {
+  margin: 0;
+  padding: 0;
+}
+#yudu_orderForm #yudu_orderFormButtons {
+  margin: 40px auto 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  font-size: 0;
+}
+#yudu_orderForm #yudu_orderFormButtons .yudu_orderFormButton {
+  height: 3em;
+  color: #3c3c3c;
+  border: 0;
+  border-radius: 6px;
+  line-height: 1.33;
+  display: inline-block;
+  width: -webkit-calc(50% - 13px);
+  width: calc(50% - 13px);
+  margin: 3px;
+}
+#yudu_orderForm #yudu_orderFormButtons #yudu_dismissOrderForm,
+#yudu_orderForm #yudu_orderFormButtons #yudu_nextViewOrderForm.enabled,
+#yudu_orderForm #yudu_orderFormButtons #yudu_previousViewOrderForm {
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+}
+#yudu_orderForm #yudu_orderFormButtons #yudu_dismissOrderForm:hover,
+#yudu_orderForm #yudu_orderFormButtons #yudu_nextViewOrderForm.enabled:hover,
+#yudu_orderForm #yudu_orderFormButtons #yudu_previousViewOrderForm:hover {
+  background-color: #ebebeb;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+#yudu_orderForm #yudu_orderFormButtons #yudu_nextViewOrderForm {
+  background-color: #e5e4e2;
+}
+#yudu_orderForm #yudu_orderFormButtons #yudu_previousViewOrderForm {
+  display: none;
+}
+#yudu_orderForm #yudu_orderFormButtons #yudu_sendOrderForm,
+#yudu_orderForm #yudu_orderFormButtons #yudu_downloadCartToCsv {
+  background-color: #e5e4e2;
+  display: none;
+}
+#yudu_orderForm #yudu_orderFormButtons #yudu_sendOrderForm.enabled,
+#yudu_orderForm #yudu_orderFormButtons #yudu_downloadCartToCsv.enabled {
+  background-color: #428bca;
+  color: #fff;
+}
+#yudu_orderForm #yudu_orderFormButtons #yudu_sendOrderForm.enabled:hover,
+#yudu_orderForm #yudu_orderFormButtons #yudu_downloadCartToCsv.enabled:hover {
+  background-color: #3276b1;
+  cursor: pointer;
+}
+#yudu_orderForm #yudu_orderFormButtons #downloadCartForm {
+  display: inline;
+}
+#yudu_pageHighlightsContainer div svg:not(:root) {
+  overflow: hidden;
+}
+#yudu_noteBackground {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2100;
+  display: none;
+  overflow: hidden;
+}
+#yudu_noteBackground #yudu_noteCloseButton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+#yudu_noteBackground #yudu_noteCreateMessage {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+  color: white;
+  display: none;
+}
+#yudu_noteBackground #yudu_noteContainer {
+  background-color: white;
+  min-height: 200px;
+  height: 200px;
+  width: 300px;
+  border-radius: 5px;
+  position: relative;
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_noteTextContainer {
+  position: absolute;
+  height: 130px;
+  width: -webkit-calc(100% - 20px);
+  width: calc(100% - 20px);
+  left: 10px;
+  top: 10px;
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_noteTextContainer #yudu_noteText {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  background: transparent no-repeat center;
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_noteTextContainer ::-webkit-scrollbar {
+  width: 12px;
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_noteTextContainer ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_noteTextContainer ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_clippingContainer {
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  top: 160px;
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_clippingContainer #yudu_clippingImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+  border-top: 1px solid black;
+  background: transparent no-repeat center;
+  background-size: contain;
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_editNoteButtons {
+  display: none;
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_editNoteButtons .yudu_editNoteButton {
+  padding: none;
+  margin: none;
+  position: absolute;
+  bottom: 0px;
+  background: transparent no-repeat center;
+  border: none;
+  border-top: 1px solid black;
+  outline: none;
+  font-weight: bold;
+  height: 40px;
+  cursor: pointer;
+  width: 50%;
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_editNoteButtons #yudu_editNoteOkButton {
+  left: 150px;
+  border-left: 1px solid black;
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_viewNoteButtons {
+  display: block;
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_viewNoteButtons .yudu_viewNoteButton {
+  width: 100px;
+  padding: none;
+  margin: none;
+  position: absolute;
+  bottom: 0px;
+  background: transparent no-repeat center;
+  border: none;
+  border-top: 1px solid black;
+  outline: none;
+  font-weight: bold;
+  height: 40px;
+  cursor: pointer;
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_viewNoteButtons #yudu_viewNoteDeleteButton {
+  left: 0px;
+  border-right: 1px solid black;
+  color: red;
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_viewNoteButtons #yudu_viewNoteBrowseButton {
+  left: 100px;
+}
+#yudu_noteBackground #yudu_noteContainer #yudu_viewNoteButtons #yudu_viewNoteOkButton {
+  border-left: 1px solid black;
+  left: 200px;
+}
+#yudu_noteBackground #yudu_noteContainer.yudu_dirtyNote #yudu_viewNoteButtons {
+  display: none;
+}
+#yudu_noteBackground #yudu_noteContainer.yudu_dirtyNote #yudu_editNoteButtons {
+  display: block;
+}
+#yudu_noteBackground.yudu_createNote {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#yudu_noteBackground.yudu_createNote #yudu_noteContainer {
+  display: none;
+}
+#yudu_noteBackground.yudu_createNote #yudu_noteCloseButton {
+  display: block;
+}
+#yudu_noteBackground.yudu_createNote #yudu_noteCreateMessage {
+  display: block;
+}
+#yudu_notesBrowseBackground {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2101;
+  display: none;
+  overflow: hidden;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseControls #yudu_notesBrowseCloseButton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowsePreviousImageContainer {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 10%;
+  left: 0;
+  overflow: hidden;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowsePreviousImageContainer #yudu_notesBrowsePreviousImageContainerInner {
+  position: absolute;
+  top: 50px;
+  height: -webkit-calc(60% - 60px);
+  height: calc(60% - 60px);
+  right: 10px;
+  width: -webkit-calc(800% - 20px);
+  width: calc(800% - 20px);
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowsePreviousImageContainer #yudu_notesBrowsePreviousImageContainerInner #yudu_notesBrowsePreviousImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+  background: transparent no-repeat right bottom;
+  background-size: contain;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseNextImageContainer {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 10%;
+  right: 0;
+  overflow: hidden;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseNextImageContainer #yudu_notesBrowseNextImageContainerInner {
+  position: absolute;
+  top: 50px;
+  height: -webkit-calc(60% - 60px);
+  height: calc(60% - 60px);
+  left: 10px;
+  width: -webkit-calc(800% - 20px);
+  width: calc(800% - 20px);
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseNextImageContainer #yudu_notesBrowseNextImageContainerInner #yudu_notesBrowseNextImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent no-repeat left bottom;
+  background-size: contain;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseCurrentNote {
+  height: 100%;
+  left: 10%;
+  right: 10%;
+  position: fixed;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseCurrentNote #yudu_notesBrowseTextContainer {
+  position: fixed;
+  top: 60%;
+  bottom: 30px;
+  left: inherit;
+  right: inherit;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseCurrentNote #yudu_notesBrowseTextContainer #yudu_notesBrowseTextContainerInner {
+  position: relative;
+  top: 10px;
+  height: -webkit-calc(100% - 20px);
+  height: calc(100% - 20px);
+  left: 10px;
+  width: -webkit-calc(100% - 20px);
+  width: calc(100% - 20px);
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseCurrentNote #yudu_notesBrowseTextContainer #yudu_notesBrowseTextContainerInner #yudu_notesBrowseText {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  font-size: 15px;
+  color: lightgrey;
+  text-align: center;
+  background: transparent no-repeat center;
+  overflow-y: scroll;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseCurrentNote #yudu_notesBrowseTextContainer #yudu_notesBrowseTextContainerInner ::-webkit-scrollbar {
+  width: 12px;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseCurrentNote #yudu_notesBrowseTextContainer #yudu_notesBrowseTextContainerInner ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(1, 1, 1, 0.3);
+  border-radius: 10px;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseCurrentNote #yudu_notesBrowseTextContainer #yudu_notesBrowseTextContainerInner ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(1, 1, 1, 0.5);
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseCurrentNote #yudu_notesBrowseImageContainer {
+  position: fixed;
+  top: 40px;
+  height: -webkit-calc(60% - 40px);
+  height: calc(60% - 40px);
+  left: inherit;
+  right: inherit;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseCurrentNote #yudu_notesBrowseImageContainer #yudu_notesBrowseImageContainerInner {
+  position: relative;
+  top: 10px;
+  height: -webkit-calc(100% - 20px);
+  height: calc(100% - 20px);
+  left: 10px;
+  width: -webkit-calc(100% - 20px);
+  width: calc(100% - 20px);
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseCurrentNote #yudu_notesBrowseImageContainer #yudu_notesBrowseImageContainerInner #yudu_notesBrowseImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+  background: transparent no-repeat center bottom;
+  background-size: contain;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseCurrentNote #yudu_notesBrowseLabels {
+  position: fixed;
+  top: 5px;
+  height: 40px;
+  left: inherit;
+  right: inherit;
+}
+#yudu_notesBrowseBackground #yudu_notesBrowseContent #yudu_notesBrowseCurrentNote #yudu_notesBrowseLabels .yudu_notesBrowseLabel {
+  position: relative;
+  width: 100%;
+  height: 17px;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  background: transparent no-repeat center;
+}
+#yudu_plainText {
+  width: 60%;
+  height: 20%;
+  margin: 20%;
+  margin-top: -200%;
+  overflow: hidden;
+  position: absolute;
+  z-index: -30000;
+}
+#yudu_plainText #yudu_plainTextSpacer {
+  height: 500px;
+}
+.yuduUtilsResizeHelper.yuduUtilsSizeDetector {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1000;
+  background-color: transparent;
+  visibility: hidden;
+  pointer-events: none;
+}
+.media-wrapper {
+  width: 100%;
+  height: calc(100% - 25px);
+}
+.custom-controls {
+  width: 100%;
+  height: 25px;
+  position: relative;
+  background-image: url('../resources/artwork/placeholderBackground.png');
+}
+.custom-controls > * {
+  float: left;
+  width: 25px;
+  height: 100%;
+  margin-left: 0.1953125%;
+  display: block;
+}
+.custom-controls > *:first-child {
+  margin-left: 0;
+}
+.custom-controls .time {
+  font-size: 10px;
+  margin-top: 5px;
+  width: 25px;
+}
+.custom-controls .progress {
+  cursor: pointer;
+  margin-top: 1px;
+  width: 50px;
+  width: calc(99% - 165px);
+}
+.custom-controls button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.custom-controls button:hover,
+.controls button:focus {
+  opacity: 0.5;
+}
+.custom-controls progress {
+  display: block;
+  width: 100%;
+  height: 81%;
+  margin-top: 0.125rem;
+  border: none;
+  color: #0095dd;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.custom-controls progress::-webkit-progress-value {
+  background-color: #0095dd;
+}
+.custom-controls button[data-state="notPlaying"] {
+  background-image: url('../resources/artwork/custom_play.png');
+}
+.custom-controls button[data-state="playing"] {
+  background-image: url('../resources/artwork/custom_pause.png');
+}
+.custom-controls button[data-state="notMuted"] {
+  background-image: url('../resources/artwork/custom_notmute.png');
+}
+.custom-controls button[data-state="muted"] {
+  background-image: url('../resources/artwork/custom_mute.png');
+}
+#yudu_dataCollectionPrompt {
+  font: 0.9em arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+  top: -10px;
+  background-color: rgba(250, 250, 250, 0.9);
+  z-index: 2101;
+  border-radius: 0px 0px 5px 5px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  display: none;
+}
+#yudu_dataCollectionPrompt #yudu_dataCollectionGreeting {
+  text-align: left;
+  padding: 4px;
+}
+#yudu_dataCollectionPrompt #yudu_dataCollectionExplanation {
+  text-align: left;
+  padding: 4px;
+  margin-top: 10px;
+}
+#yudu_dataCollectionPrompt #yudu_dataCollectionEmail {
+  font-size: 13px;
+  width: -webkit-calc(100% - 10px);
+  width: calc(100% - 10px);
+  height: 27px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  padding: 4px;
+  margin-top: 10px;
+  line-height: 18px;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px 1px 0px 1px;
+  border-radius: 3px 3px 0px 0px;
+}
+#yudu_dataCollectionPrompt #yudu_dataCollectionEmail:focus {
+  border-color: rgba(0, 160, 234, 0.8);
+  border-width: 1px;
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  outline: 0 none;
+}
+#yudu_dataCollectionPrompt #yudu_dataCollectionValidation {
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 3px;
+  display: none;
+}
+#yudu_dataCollectionPrompt #yudu_dataCollectionDontShowAgainContainer,
+#yudu_dataCollectionPrompt #yudu_dataCollectionInfoLinkContainer {
+  text-align: left;
+  margin-top: 10px;
+}
+#yudu_dataCollectionPrompt button {
+  margin: 0;
+  padding: 0;
+}
+#yudu_dataCollectionPrompt #yudu_dataCollectionButtons {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-size: 0;
+}
+#yudu_dataCollectionPrompt #yudu_dataCollectionButtons .yudu_dataCollectionButton {
+  height: 3em;
+  color: #3c3c3c;
+  border: 0;
+  line-height: 1.33;
+  display: inline-block;
+  width: -webkit-calc(50% - 13px);
+  width: calc(50% - 13px);
+  margin: 0;
+  cursor: pointer;
+}
+#yudu_dataCollectionPrompt #yudu_dataCollectionButtons #yudu_dataCollectionSkip {
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-right: 3px;
+}
+#yudu_dataCollectionPrompt #yudu_dataCollectionButtons #yudu_dataCollectionSubmit {
+  background-color: #428bca;
+  color: #fff;
+  border-radius: 6px;
+  margin-left: 3px;
+}
+#yudu_dataCollectionPrompt #yudu_dataCollectionButtons #yudu_dataCollectionSkip:hover {
+  background-color: #ebebeb;
+  border: 1px solid #ccc;
+}
+#yudu_dataCollectionPrompt #yudu_dataCollectionButtons #yudu_dataCollectionSubmit:hover {
+  background-color: #3276b1;
+}
+#yudu_dataCollectionPrompt .yudu_loginExtras {
+  text-align: right;
+  margin-top: 10px;
+  text-decoration: none;
+}
+#yudu_dataCollectionPrompt #yudu_loginSubscribe {
+  cursor: pointer;
+}
+#yudu_dataCollectionPrompt #yudu_loginSubscribe:hover {
+  opacity: 0.7;
+}
+#yudu_gaTrackerConsent {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2F4F4;
+  z-index: 4000;
+  visibility: hidden;
+  padding: 30px 0px;
+}
+#yudu_gaTrackerConsent.show {
+  visibility: visible;
+}
+#gaTrackerConsentMessage {
+  text-align: center;
+  margin: 0px 10% 20px;
+}
+#consentButtonContainer {
+  display: flex;
+  justify-content: center;
+  flex: 0 1 auto;
+}
+#consentButton {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: solid 1px #CCC;
+  cursor: pointer;
+}
+#consentButton:first-child {
+  margin-right: 20px;
+}
+#consentButton:hover {
+  border: solid 1px #9C9D9D;
+}
+#consentButton:active {
+  box-shadow: inset 1px 1px 10px #333;
+  transform: translateY(1px);
+}
+#consentBannerPrivacyPolicyLink {
+  margin-top: 10px;
+}

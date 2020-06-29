@@ -1,0 +1,224 @@
+#controls {
+  border: none;
+  background-color: #f2f4f4;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  height: 34px;
+  width: 100%;
+  position: absolute;
+  z-index: 2000;
+  white-space: nowrap;
+}
+#controls .control {
+  border: none;
+  background: transparent no-repeat center;
+  background-size: contain;
+  outline: none;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 0;
+}
+#controls .control:hover {
+  cursor: pointer;
+}
+#controls .touchControl {
+  margin-top: 10px;
+  position: absolute;
+}
+#controls #logoLink {
+  display: none;
+}
+#controls #logoLink:hover {
+  cursor: pointer;
+}
+#controls #logoImage {
+  width: auto;
+  border: 0;
+  vertical-align: top;
+  height: 34px;
+}
+#controls #rightControls {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  top: 0;
+  height: inherit;
+}
+#controls #rightControls #desktopSearchContainer {
+  display: none;
+  position: relative;
+  vertical-align: middle;
+  width: 156px;
+  /* text area: 125px width, 25+4px padding, 1+1px border; without this limit, the moved icon contributes */
+
+  margin: 5px 10px 5px 10px;
+}
+#controls #rightControls #desktopSearchContainer #desktopSearchGo {
+  position: relative;
+  right: 26px;
+  /* 20px for width of icon, 6px for its padding */
+
+}
+#controls #rightControls .control {
+  vertical-align: middle;
+}
+#controls.touchDevice {
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.searchText {
+  font-size: 13px;
+  width: 125px;
+  height: 20px;
+  padding: 1px 25px 1px 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  line-height: 18px;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  border-radius: 3px 3px 3px 3px;
+}
+.searchGo {
+  background: transparent no-repeat center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  border: 0px;
+  position: absolute;
+  vertical-align: middle;
+  outline: none;
+}
+.searchGo:hover {
+  cursor: pointer;
+}
+#shareContainer {
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  position: absolute;
+  background-color: rgba(250, 250, 250, 0.9);
+  z-index: 1900;
+  overflow: hidden;
+  display: none;
+  width: 250px;
+}
+#shareContainer #shareButtons {
+  margin: 10px 5px 10px 5px;
+}
+#shareContainer #shareButtons .shareOption {
+  position: relative;
+  cursor: pointer;
+  padding: 5px 5px;
+  border: 1px solid #baaaaa;
+  border-radius: 3px;
+  background-color: rgba(250, 250, 250, 0.9);
+  margin: 5px;
+  height: 40px;
+  width: -webkit-calc(100% - 22px);
+  width: calc(100% - 22px);
+  display: none;
+}
+#shareContainer #shareButtons .shareOption img {
+  width: 40px;
+}
+#shareContainer #shareButtons .shareOption span {
+  position: absolute;
+  top: -webkit-calc(50% - 9px);
+  top: calc(50% - 9px);
+  left: 65px;
+}
+#shareContainer #shareCurrentPage {
+  margin: 10px;
+}
+#shareContainer #shareCurrentPage #shareCurrentPageButtons {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  display: table;
+}
+#shareContainer #shareCurrentPage #shareCurrentPageButtons #firstPage {
+  font-size: 1em;
+  border-radius: 5px 0px 0px 5px;
+  border-right: none;
+  display: table-cell;
+  vertical-align: middle;
+}
+#shareContainer #shareCurrentPage #shareCurrentPageButtons #currentPage {
+  font-size: 1em;
+  border-radius: 0px 5px 5px 0px;
+  display: table-cell;
+  vertical-align: middle;
+}
+#shareContainer #shareCurrentPage #shareCurrentPageButtons .sharePage {
+  outline: none;
+  margin: 0px;
+  border: 1px solid #428bca;
+  background-color: #ffffff;
+  height: 35px;
+  width: 50%;
+  color: black;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#shareContainer #shareCurrentPage #shareCurrentPageButtons .sharePage:hover {
+  cursor: pointer;
+}
+#shareContainer #shareCurrentPage #shareCurrentPageButtons .selected {
+  background-color: #428bca;
+  color: white;
+}
+#shareContainer.isDesktop {
+  top: 34px;
+  border-radius: 0px 0px 5px 5px;
+}
+#shareContainer.touchDevice {
+  bottom: 44px;
+  position: fixed;
+  border-radius: 5px 5px 0px 0px;
+}
+.box-shadow {
+  box-shadow: 0px 0px 10px 1px #5c5c5c;
+}
+#contentsContainer {
+  z-index: 1900;
+  position: fixed;
+  display: none;
+  width: 100%;
+  max-width: 300px;
+  max-height: 50%;
+  background-color: rgba(250, 250, 250, 0.9);
+  border: #dfdfdf 1px solid;
+  overflow: auto;
+  padding: 1px;
+  -webkit-overflow-scrolling: touch;
+}
+#contentsContainer.isDesktop {
+  top: 34px;
+  border-radius: 0px 0px 5px 5px;
+}
+#contentsContainer.touchDevice {
+  bottom: 44px;
+  border-radius: 5px 5px 0px 0px;
+}
+#contentsContainer .contentsElement {
+  margin-left: 15px;
+}
+#contentsContainer .contentsElement hr {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  margin: 0px;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-top: 1px solid rgba(160, 160, 160, 0.6);
+}
+#contentsContainer .contentsLink {
+  padding: 5px;
+  cursor: pointer;
+  margin: 2px;
+}
+.noPointerEvents {
+  pointer-events: none;
+}

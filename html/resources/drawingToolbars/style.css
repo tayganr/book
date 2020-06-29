@@ -1,0 +1,239 @@
+#editOptionsToolbar {
+  z-index: 2050;
+  border: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #f2f4f4;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  height: 34px;
+  white-space: nowrap;
+  display: inline-block;
+}
+#editOptionsToolbar .editOptionButton {
+  font-size: 1em;
+  border: none;
+  background: transparent no-repeat center;
+  background-size: contain;
+  outline: none;
+  min-width: 24px;
+  height: 24px;
+  display: inline-block;
+  width: 20%;
+  margin: 5px 0px 0px 0px;
+}
+#editOptionsToolbar .editOptionButton:hover {
+  cursor: pointer;
+}
+#editOptionsToolbar .editOptionButton:nth-child(1),
+#editOptionsToolbar .editOptionButton:nth-child(4) {
+  text-align: left;
+}
+#editOptionsToolbar .editOptionButton:nth-child(2),
+#editOptionsToolbar .editOptionButton:nth-child(5) {
+  text-align: right;
+}
+#editOptionsToolbar .editOptionButton:first-child {
+  padding-left: 1em;
+}
+#editOptionsToolbar .editOptionButton:last-child {
+  padding-right: 1em;
+  font-weight: bold;
+}
+#drawingOptionsToolbar {
+  z-index: 2050;
+  border: none;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #f2f4f4;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  height: 34px;
+  white-space: nowrap;
+}
+#drawingOptionsToolbar .drawingOptionToolbarButton {
+  border: none;
+  background: transparent no-repeat center;
+  background-size: contain;
+  outline: none;
+  align-content: center;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 0px;
+  position: absolute;
+}
+#drawingOptionsToolbar .drawingOptionToolbarButton:hover {
+  cursor: pointer;
+}
+#drawingOptionsToolbar .radio {
+  opacity: 0.3;
+}
+#drawingOptionsToolbar .selected {
+  opacity: 1;
+}
+#drawingOptionsToolbar #drawingOptions {
+  border: 1px solid black;
+  border-radius: 50%;
+}
+#drawingOptionsToolbar #drawingOptionsPanel.hidden {
+  display: none;
+}
+#drawingOptionsToolbar #drawingOptionsPanel:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 15px 0;
+  border-color: #F8FAFA transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -15px;
+  left: 15px;
+}
+#drawingOptionsToolbar.touchDevice {
+  top: auto;
+  bottom: 0px;
+  position: fixed;
+  height: 44px;
+}
+#drawingOptionsPanel.hidden {
+  display: none;
+}
+#drawingOptionsPanel:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 15px 0;
+  border-color: #F8FAFA transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -15px;
+  left: 15px;
+}
+#drawingOptionsPanel {
+  position: absolute;
+  z-index: 4000;
+  background-color: #f8fafa;
+  border-radius: 8px;
+  display: table;
+  bottom: 45px;
+}
+#drawingOptionsPanel #penSizeSelector,
+#drawingOptionsPanel #opacitySelector {
+  position: relative;
+}
+#drawingOptionsPanel #penSizeSelector {
+  left: 60px;
+}
+#drawingOptionsPanel #opacitySelector {
+  left: 28px;
+}
+#drawingOptionsPanel .radioIndicator {
+  margin: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid transparent;
+}
+#drawingOptionsPanel label.drawingOptionButton {
+  display: table-cell;
+  vertical-align: middle;
+  align-content: center;
+}
+#drawingOptionsPanel label > input {
+  display: none;
+}
+#drawingOptionsPanel label.drawingOptionButton > input:checked + div.radioIndicator {
+  border: 2px solid #007AFF;
+}
+#drawingOptionsPanel .radioIndicator .drawingOption {
+  border-radius: 50%;
+  margin: 3px;
+}
+#drawingOptionsPanel .colourOption {
+  width: 24px;
+  height: 24px;
+  border: 1px solid black;
+}
+#drawingOptionsPanel .penSizeOption {
+  vertical-align: middle;
+  background: black;
+  opacity: 1;
+}
+#drawingOptionsPanel .opacityOption {
+  width: 24px;
+  height: 24px;
+}
+#drawingOptionsPanel #colourOption1 {
+  background: #FF0000;
+}
+#drawingOptionsPanel #colourOption2 {
+  background: #0000FF;
+}
+#drawingOptionsPanel #colourOption3 {
+  background: #00FF00;
+}
+#drawingOptionsPanel #colourOption4 {
+  background: #FFFF00;
+}
+#drawingOptionsPanel #colourOption5 {
+  background: #FFFFFF;
+}
+#drawingOptionsPanel #colourOption6 {
+  background: #000000;
+}
+#drawingOptionsPanel #penSizeOption1 {
+  width: 5px;
+  height: 5px;
+}
+#drawingOptionsPanel #penSizeOption2 {
+  width: 10px;
+  height: 10px;
+}
+#drawingOptionsPanel #penSizeOption3 {
+  width: 20px;
+  height: 20px;
+}
+#drawingOptionsPanel #penSizeOption4 {
+  width: 40px;
+  height: 40px;
+}
+#drawingOptionsPanel #opacityOption1 {
+  opacity: 0.1;
+}
+#drawingOptionsPanel #opacityOption2 {
+  opacity: 0.3;
+}
+#drawingOptionsPanel #opacityOption3 {
+  opacity: 0.5;
+}
+#drawingOptionsPanel #opacityOption4 {
+  opacity: 0.7;
+}
+#drawingOptionsPanel #opacityOption5 {
+  opacity: 1;
+}
+#drawingOptionsPanel.touchDevice {
+  bottom: 54px;
+}
+#drawingOptionsBackground {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2100;
+  overflow: hidden;
+  display: none;
+}
+#highlightingCanvasContainer {
+  display: none;
+}
+#highlightingToolsContainer {
+  display: none;
+}

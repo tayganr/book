@@ -1,0 +1,152 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  position:relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* Columns */
+#left, #middle, #right {
+  float: left;
+  height: 100%;
+  background: rgba(249,249,249,0.9);
+  display:table;
+}
+
+#middle {
+  width: 76%;
+  text-align: center;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#left {
+  width: 10%;
+  box-shadow: inset -1px 0 0 #808285;
+}
+
+#right {
+  width: 10%;
+  box-shadow: inset 1px 0 0 #808285;
+}
+
+#block {
+  display: table-cell;
+  align-content: center;
+  vertical-align: middle;
+  text-align: center;
+  max-height:100%;
+}
+
+.tap {
+  display: table-cell;
+  align-content: center;
+  vertical-align: middle;
+  text-align: center;  
+}
+
+.tap img {
+  width: 100%;
+  max-width: 86px;
+}
+
+/* Content */
+#gestures {
+  margin: 0% auto 0% auto;
+  background-image: url("gestures.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  max-width: 567px;
+  max-height: 192px;
+  height: 30%;
+}
+
+#logo {
+  margin: 1% auto 0% auto;
+  max-height: 177px;
+  height: 0%;
+  max-width: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@media all and (max-device-width: 480px) {
+  #title {
+    display:none;
+  }
+  #logo {
+    display:none;
+  }
+}
+
+h2 {
+  font: 1.8em 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0.5% 0%;
+}
+
+p, label, button {
+  font: 1.2em 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 0.5% 0%;
+}
+
+p, label {
+  display:block;
+}
+
+label {
+    margin:2% 0% 0% 0%;
+    padding: 0.5%
+}
+
+button {
+    padding: 0.2% 0.7%;
+}
+
+input[type='checkbox'] {
+    width:30px;
+    height:30px;
+    vertical-align: middle;
+}
+
+/* Desktop */
+#mouse {
+  background-image: url("mouse.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 25%;
+}
+
+#keys {
+  background-image: url("keys.png");
+  background-repeat: no-repeat;
+  background-position: center;    background-size: contain;
+  height: 25%;
+}
+/* Landscape */
+@media screen and (orientation:landscape){
+  #mouse {
+    width: 50%;
+    float: left;
+    height:40%;
+  }
+
+  #keys {
+    width: 50%;
+    float: left;
+    height: 40%;
+  }
+
+  #mouseText {
+    width:50%;
+    margin-left:50%;
+  }
+}

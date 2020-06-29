@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Incompatible browser</title>
+        <style>
+            body {
+                font-family: Verdana,Tahoma,Arial,sans-serif;
+            }
+            #upgradeMessage {
+                height: 250px;
+
+                position: absolute;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+
+                margin: auto;
+            }
+            .downloads {
+                margin: 0 auto;
+            }
+            .download {
+                display: inline-block;
+                position: relative;
+                margin: 0 5px;
+            }
+            #flash {
+                background: url('required/browserSprites.png') 0 0;
+                height: 100px;
+                width: 160px;
+            }
+            #chrome {
+                background: url('required/browserSprites.png') -160px 0;
+                height: 100px;
+                width: 100px;
+            }
+            #firefox {
+                background: url('required/browserSprites.png') -260px 0;
+                height: 100px;
+                width: 97px;
+            }
+            #ie {
+                background: url('required/browserSprites.png') -357px 0;
+                height: 100px;
+                width: 103px;
+            }
+            #splitter {
+                border-right: solid 1px #c9c9c9;
+                width: 10px;
+                height: 100px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="upgradeMessage" class="message" style="text-align:center;">
+            <div>
+                This edition requires either Adobe Flash, or alternatively, an HTML 5 compatible browser. It seems that
+                your browser provides neither of these features.<br /><br />
+                Links to both options are available below for your convenience.<br /><br /><br />
+            </div>
+            <br />
+            <div class="downloads">
+                <a id="flash" class="download flashDownload" href="http://www.adobe.com/go/getflashplayer"></a>
+                <div id="splitter"></div>
+                <a id="chrome" class="download" href="http://www.google.com/chrome/"></a>
+                <a id="firefox" class="download" href="http://www.mozilla.org/firefox/"></a>
+                <a id="ie" class="download" href="http://ie.microsoft.com/"></a>
+            </div>
+        </div>
+    </body>
+</html>

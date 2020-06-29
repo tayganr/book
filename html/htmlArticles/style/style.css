@@ -1,0 +1,368 @@
+#yudu_messageBox {
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+  top: -10px;
+  background-color: rgba(250, 250, 250, 0.9);
+  z-index: 2101;
+  border-radius: 0px 0px 5px 5px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  display: none;
+}
+#yudu_messageBox #yudu_message {
+  margin: 0 0 15px 0;
+  border-radius: 10px;
+  padding: 30px 0;
+}
+#yudu_messageBox #yudu_messageClose {
+  margin: 0;
+  padding: 0;
+  background-color: #428bca;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  width: 47%;
+  height: 3em;
+  line-height: 1.33;
+  cursor: pointer;
+}
+#yudu_messageBox #yudu_messageClose:hover {
+  background-color: #3276b1;
+}
+#yudu_messageBox #yudu_messageCancel {
+  margin: 0;
+  padding: 0;
+  background-color: #ca4242;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  width: 47%;
+  height: 3em;
+  line-height: 1.33;
+  cursor: pointer;
+  display: none;
+}
+#yudu_messageBox #yudu_messageCancel:hover {
+  background-color: #b13232;
+}
+#yudu_messageBox #yudu_messageOk {
+  margin: 0;
+  padding: 0;
+  background-color: #428bca;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  width: 47%;
+  height: 3em;
+  line-height: 1.33;
+  cursor: pointer;
+  display: none;
+}
+#yudu_messageBox #yudu_messageOk:hover {
+  background-color: #3276b1;
+}
+#yudu_messageBox.yudu_twoButton #yudu_messageClose {
+  display: none;
+}
+#yudu_messageBox.yudu_twoButton #yudu_messageCancel {
+  display: inline;
+}
+#yudu_messageBox.yudu_twoButton #yudu_messageOk {
+  display: inline;
+}
+.yudu_failure {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.yudu_success {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+.yudu_default {
+  background-color: rgba(220, 220, 220, 0.5);
+}
+.yudu_box-shadow {
+  box-shadow: 0px 0px 10px 1px #5c5c5c;
+}
+#yudu_emailShareContainer {
+  font-size: 0.9em;
+  position: relative;
+  background-color: rgba(250, 250, 250, 0.9);
+  padding: 10px;
+  z-index: 2101;
+  border-radius: 0px 0px 5px 5px;
+  overflow: hidden;
+  display: none;
+  max-width: 400px;
+  margin: 0 auto;
+  top: -10px;
+}
+#yudu_emailShareContainer #yudu_emailInputs {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+#yudu_emailShareContainer #yudu_emailInputs input {
+  font-size: 13px;
+  width: -webkit-calc(100% - 10px);
+  width: calc(100% - 10px);
+  height: 27px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  padding: 4px;
+  line-height: 18px;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  border-radius: 3px 3px 3px 3px;
+}
+#yudu_emailShareContainer #yudu_emailInputs .yudu_inputContainer {
+  margin: 5px 10px;
+}
+#yudu_emailShareContainer #yudu_emailInputs input:focus {
+  border-color: rgba(0, 160, 234, 0.8);
+  border-width: 1px;
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  outline: 0 none;
+}
+#yudu_emailShareContainer #yudu_emailInputs label {
+  margin-right: 15px;
+}
+#yudu_emailShareContainer #yudu_comments {
+  padding: 0px 10px;
+  margin: 0px;
+  margin-top: 20px;
+}
+#yudu_emailShareContainer #yudu_comments #yudu_comment {
+  resize: none;
+  font-size: 13px;
+  width: -webkit-calc(100% - 10px);
+  width: calc(100% - 10px);
+  height: auto;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  padding: 4px;
+  line-height: 18px;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 3px;
+}
+#yudu_emailShareContainer #yudu_comments #yudu_comment:focus {
+  border-color: rgba(0, 160, 234, 0.8);
+  border-width: 1px;
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  box-shadow: inset 0px 0px 5px 0px rgba(0, 160, 234, 0.75);
+  transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  outline: 0 none;
+}
+#yudu_emailShareContainer button {
+  margin: 0;
+  padding: 0;
+}
+#yudu_emailShareContainer #yudu_emailButtons {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-size: 0;
+}
+#yudu_emailShareContainer #yudu_emailButtons .yudu_emailButton {
+  height: 3em;
+  color: #3c3c3c;
+  border: 0;
+  line-height: 1.33;
+  display: inline-block;
+  width: -webkit-calc(50% - 13px);
+  width: calc(50% - 13px);
+  margin: 0;
+  cursor: pointer;
+}
+#yudu_emailShareContainer #yudu_emailButtons #yudu_emailCancel {
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-right: 3px;
+}
+#yudu_emailShareContainer #yudu_emailButtons #yudu_emailSend {
+  background-color: #428bca;
+  color: #fff;
+  border-radius: 6px;
+  margin-left: 3px;
+}
+#yudu_emailShareContainer #yudu_emailButtons #yudu_emailCancel:hover {
+  background-color: #ebebeb;
+  border: 1px solid #ccc;
+}
+#yudu_emailShareContainer #yudu_emailButtons #yudu_emailSend:hover {
+  background-color: #3276b1;
+}
+#frameEnvelope {
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+#frameEnvelope iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+#frameEnvelope div.ios {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+#frameEnvelope div.ios div {
+  height: 100%;
+  overflow-y: auto;
+}
+#frameEnvelope div.ios div iframe {
+  width: 100%;
+  height: 100%;
+}
+.controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border: none;
+  background-color: #f2f4f4;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  z-index: 2000;
+  white-space: nowrap;
+}
+.controls .control {
+  border: none;
+  background: transparent no-repeat center;
+  background-size: contain;
+  outline: none;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  visibility: visible;
+  padding: 0;
+}
+.controls .control:hover {
+  cursor: pointer;
+}
+.controls .control.hidden {
+  display: none;
+}
+.controls .control.controlInitialState {
+  visibility: hidden;
+}
+#contentsContainer.hidden {
+  visibility: hidden;
+  display: none;
+}
+#contentsContainer #contentsList {
+  z-index: 4000;
+  position: fixed;
+  padding: 1px;
+  font-size: large;
+  border: #dfdfdf 1px solid;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+#contentsContainer #contentsList .contentsElement {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#contentsContainer #contentsList .contentsElement .contentsLink {
+  padding: 5px;
+  cursor: pointer;
+  margin: 2px;
+}
+#contentsContainer #contentsList .contentsElement hr {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-top: 1px solid rgba(160, 160, 160, 0.6);
+}
+#contentsContainer #contentsList .contentsElement:hover {
+  background-color: #E8E8E8;
+}
+#contentsContainer #contentsBackground {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 3999;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body.desktop #frameEnvelope,
+body:not(.mobile) #frameEnvelope {
+  top: 34px;
+  bottom: 0;
+}
+body.desktop .controls,
+body:not(.mobile) .controls {
+  top: 0;
+  height: 34px;
+}
+body.desktop .controls .control,
+body:not(.mobile) .controls .control {
+  margin: 5px 10px;
+}
+body.desktop #contentsContainer #contentsList,
+body:not(.mobile) #contentsContainer #contentsList {
+  top: 34px;
+  max-width: 300px;
+  max-height: 50%;
+  background-color: rgba(250, 250, 250, 0.9);
+  border-radius: 5px;
+}
+body.desktop #contentsContainer #contentsBackground,
+body:not(.mobile) #contentsContainer #contentsBackground {
+  top: 34px;
+  bottom: 0;
+}
+body.mobile #frameEnvelope {
+  top: 0;
+  bottom: 44px;
+}
+body.mobile .controls {
+  bottom: 0;
+  height: 44px;
+}
+body.mobile .controls .control {
+  margin: 10px;
+  position: absolute;
+}
+body.mobile #contentsContainer #contentsList {
+  left: 0;
+  width: 100%;
+  top: 0;
+  bottom: 44px;
+  background-color: whitesmoke;
+  border-radius: 0;
+}
+body.mobile #contentsContainer #contentsBackground {
+  top: 0;
+  bottom: 44px;
+}
+body.mobile.iosLandscapeCompensator #frameEnvelope {
+  bottom: 88px;
+}
+body.mobile.iosLandscapeCompensator .controls {
+  bottom: 44px;
+}
+body.mobile.iosLandscapeCompensator .contentsList {
+  bottom: 88px;
+}

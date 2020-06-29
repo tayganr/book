@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale = 1.0, user-scalable = no">
+
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            overflow: hidden;
+            font-family: Helvetica, Verdana, Arial, sans-serif;
+            background-color: rgb(242, 244, 244);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -ms-touch-action: none;
+            touch-action: none;
+        }
+
+        div {
+            padding-bottom: 3px;
+        }
+
+        #productName {
+            font-size: 1.5em;
+        }
+
+        #buttons {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            display: table;
+            position: absolute;
+            background-color: rgb(230, 232, 232);
+            border-top: 1px solid #bbb;
+            box-shadow: inset 0 1px 0 #fff;
+        }
+
+        #buttons a {
+            display: table-cell;
+            width: 50%;
+            vertical-align: middle;
+            text-align: center;
+            text-shadow: grey 1px 1px 2px;
+        }
+
+        #buttons a:hover {
+            cursor: pointer;
+        }
+
+        #buttons a:first-child {
+            text-align: left;
+            padding-left: 5%;
+        }
+
+        #buttons a:last-child {
+            text-align: right;
+            padding-right: 5%;
+        }
+
+        #productImage {
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #productImage > img {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            height:auto;
+        }
+
+        #contents {
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+            max-height: -webkit-calc(100% - 48px);
+            max-height: -moz-calc(100% - 48px);
+            max-height: calc(100% - 48px);
+            width: -webkit-calc(100% - 8px);
+            width: -moz-calc(100% - 8px);
+            width: calc(100% - 8px);
+            padding: 4px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function instantiated() {
+            scaleImage();
+        }
+
+        function scaleImage() {
+            var imageHolder = document.getElementById('productImage');
+            var image = imageHolder.getElementsByTagName("img")[0];
+
+            if (!image) return;
+
+            var bodyHeight = document.body.scrollHeight;
+            var textHeight = document.getElementById('productName').offsetHeight +
+                             document.getElementById('productPrice').offsetHeight +
+                             document.getElementById('productDescription').offsetHeight;
+
+            imageHolder.style.width = (document.getElementById('contents').offsetWidth - 20) + "px";
+            if (textHeight < bodyHeight * 0.4) {
+                imageHolder.style.height = (bodyHeight - textHeight - 55) + "px";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+<div id="contents">
+    <div id="productName"></div>
+    <div id="productPrice"></div>
+    <div id="productDescription"></div>
+    <div id="productImage"></div>
+</div>
+<div id="buttons">
+    <a id="cancelButton">Cancel</a>
+    <a id="purchaseButton">Buy</a>
+</div>
+</body>
+
+</html>

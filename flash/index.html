@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <title>AffariTest</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta name="title" content="AffariTest" />
+  <meta name="description" content="&nbsp;" />
+  <link rel="image_src" href="content/1Thumb.jpg" />
+  <script type="text/javascript">
+    //keep embedded and subst_... query parameters if set here:
+    var UrlParams="referrerUrl="+encodeURIComponent(document.referrer);
+    var queryVars = location.search.substring(1).split("&");
+    for (i=0;i<queryVars.length;i++)
+    {
+      var keyAndValue = queryVars[i].split("=")
+      if (/^(distributorId|embedded|subst_\w+)$/.test(keyAndValue[0]))
+      {
+        UrlParams += "&" + keyAndValue[0] + "=" + keyAndValue[1];
+      }
+    }
+    var hashVars = location.hash;
+    if (hashVars.indexOf("#noRedirect") >= 0)
+    {
+        UrlParams += "#noRedirect";
+    }
+    document.write('<meta http-equiv="refresh" content="0;URL=resources/index.htm?' + UrlParams + '">'); 
+  </script>
+</head>
+<body>
+</body>
+</html>

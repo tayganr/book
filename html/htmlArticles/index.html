@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- For hammer (https://github.com/EightMedia/hammer.js/wiki/Tips-&-Tricks) -->
+        <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <meta property="og:image" content="thumbnails/0.jpg" />
+        <link rel='image_src' href='thumbnails/0.jpg' />
+        <script src="../strings.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <title>PhoneView</title>
+    </head>
+
+    <body>
+        <div id="frameEnvelope"></div>
+        <div id="yudu_articleToolbar" class="controls"></div>
+        <div id="contentsContainer" class="box-shadow hidden">
+            <div id="contentsBackground"></div>
+            <div id="contentsList"></div>
+        </div>
+        <!-- See also resources/toolbar/toolbarPhoneview.html (or client-specified alternative). -->
+
+        <div id="yudu_messageBackground"></div>
+        <div id="yudu_messageBox" class="yudu_box-shadow">
+            <div id="yudu_message" class="yudu_default"></div>
+            <button type="submit" id="yudu_messageCancel" class="yudu_localisable">Cancel</button>
+            <button type="submit" id="yudu_messageOk" class="yudu_localisable">OK</button>
+            <button type="submit" id="yudu_messageClose" class="yudu_localisable">message.close</button>
+        </div>
+
+        <!-- The email share container rightly belongs in the brandable toolbar module, but is here for consistency
+             with the main reader. This should be sorted out as part of making the PhoneView toolbar properly
+             rebrandable, if we ever need that. -->
+        <div id="yudu_shareBackground" class="yudu_noDrag"></div>
+        <div id="yudu_emailShareContainer" class="yudu_noDrag yudu_box-shadow">
+            <form id="yudu_emailForm">
+                <div id="yudu_emailInputs">
+                    <div class="yudu_inputContainer"><label for="yudu_fromAddress" class="yudu_localisable">sharing.fromAddress</label><input type="text" id="yudu_fromAddress" class="yudu_localisable-placeholder" placeholder="sharing.fromAddressPlaceholder"></div>
+                    <div class="yudu_inputContainer"><label for="yudu_toAddress" class="yudu_localisable">sharing.toAddress</label><input type="text" id="yudu_toAddress" class="yudu_localisable-placeholder" placeholder="sharing.toAddressPlaceholder"></div>
+                </div>
+                <div id="yudu_comments">
+                    <label for="yudu_comment" class="yudu_localisable">sharing.comments</label>
+                    <textarea id="yudu_comment" rows="4" cols="40"></textarea>
+                </div>
+                <div id="yudu_emailButtons">
+                    <button type="button" id="yudu_emailCancel" class="yudu_emailButton yudu_localisable">sharing.cancel</button>
+                    <button type="submit" id="yudu_emailSend" class="yudu_emailButton yudu_localisable">sharing.send</button>
+                </div>
+            </form>
+        </div>
+
+        <script src="articles.min.js"></script>
+    </body>
+</html>

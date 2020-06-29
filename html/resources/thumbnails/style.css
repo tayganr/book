@@ -1,0 +1,143 @@
+#thumbnailBar {
+  display: none;
+}
+#thumbnailBar.touchDevice #thumbnails {
+  height: 20%;
+}
+#thumbnailBar #segmentedBackground {
+  position: fixed;
+  bottom: 190px;
+  left: -300px;
+  right: -300px;
+  height: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  background-color: black;
+  text-align: center;
+}
+#thumbnailBar #segmentedBackground.touchDevice {
+  bottom: -webkit-calc(20% + 50px);
+  bottom: calc(20% + 50px);
+}
+#thumbnailBar #segmentedBackground.hidden {
+  height: 0;
+  padding-top: 0;
+}
+#thumbnailBar #segmentedBackground #segmentedController {
+  display: inline-block;
+}
+#thumbnailBar #segmentedBackground #segmentedController div {
+  display: inline-block;
+  min-width: 65px;
+  padding: 4px 6px;
+  text-align: center;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  border-width: 2px 1px 2px 1px;
+  border-style: solid;
+  border-color: white;
+}
+#thumbnailBar #segmentedBackground #segmentedController div:hover {
+  cursor: pointer;
+}
+#thumbnailBar #segmentedBackground #segmentedController .selected {
+  background-color: white;
+  color: black;
+}
+#thumbnailBar #segmentedBackground #segmentedController .left {
+  border-left-width: 2px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  margin-left: 6px;
+}
+#thumbnailBar #segmentedBackground #segmentedController .right {
+  border-right-width: 2px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-right: 6px;
+}
+#thumbnailBar #thumbnails {
+  position: fixed;
+  bottom: 50px;
+  left: 0px;
+  height: 141px;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+#thumbnailBar #thumbnails .thumbnail {
+  background-size: 100% 100%;
+  background-color: rgba(250, 250, 250, 0.9);
+}
+#thumbnailBar #thumbnails .thumbnail:hover {
+  cursor: pointer;
+}
+#thumbnailBar #labelContainer {
+  position: fixed;
+  bottom: 25px;
+  left: 0px;
+  height: 25px;
+  width: 100%;
+  padding-bottom: 5px;
+  overflow: hidden;
+  background-color: black;
+}
+#thumbnailBar #labelContainer #pageLabel {
+  height: 20px;
+  padding-top: 5px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+#thumbnailBar #progressContainer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  height: 30px;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+#thumbnailBar #progressContainer #progressBackground {
+  position: absolute;
+  bottom: 5px;
+  left: 10%;
+  height: 20px;
+  width: 80%;
+}
+#thumbnailBar #progressContainer #progressBackground #progressBackgroundDisplay {
+  position: absolute;
+  top: 9px;
+  height: 2px;
+  width: 100%;
+  background-color: #bbbbbb;
+}
+#thumbnailBar #progressContainer #progressBackground #progressBackgroundDisplay #progressBar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 2px;
+  width: 0%;
+  background-color: #3366ff;
+}
+#thumbnailBar #progressContainer #progressIcon {
+  position: absolute;
+  bottom: 0px;
+  height: 30px;
+  width: 40px;
+  border-radius: 0px;
+}
+#thumbnailBar #progressContainer #progressIcon #progressIconDisplay {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background-color: rgba(250, 250, 250, 0.9);
+}
+#thumbnailBar #progressContainer #progressIcon #progressIconDisplay:hover {
+  cursor: pointer;
+}

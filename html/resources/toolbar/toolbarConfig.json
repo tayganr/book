@@ -1,0 +1,8 @@
+{
+  "mainHtmlFilePath": "toolbar/toolbar.html",
+  "mainJavascriptFilePath": "toolbar/toolbar.min.js",
+  "desktopPosition": "top",
+  "desktopSize": "34px",
+  "touchPosition": "bottom",
+  "touchSize": "44px"
+}

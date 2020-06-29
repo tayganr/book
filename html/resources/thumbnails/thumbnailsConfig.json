@@ -1,0 +1,6 @@
+{
+  "mainHtmlFilePath": "thumbnails/thumbnails.html",
+  "mainJavascriptFilePath": "thumbnails/thumbnails.min.js",
+  "desktopPosition": "bottom",
+  "touchPosition": "bottom"
+}

@@ -1,0 +1,32 @@
+/* This file is the same on AS2 and AS3 */
+
+#flashObject, #ReaderSWF, #SWFObjectExprInst
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  outline: none;
+
+  /* We set the z index of the flash items to ensure they appear higher than the
+   * plain text, otherwise Safari gets muddled up and fails to pass mouse events
+   * to Flash. */
+  z-index: 2;
+}
+
+/* We only want to display this element to screen readers.
+ * Assumption: browser is screen reader <--> browser ignores CSS.
+ */
+div.screenReader
+{
+  text-indent: -5000px;
+  position: absolute;
+}
+
+div#plainText
+{
+  width: 60%;
+  height: 20%;
+  margin: 20%;
+  overflow: hidden;
+  position: absolute;
+}

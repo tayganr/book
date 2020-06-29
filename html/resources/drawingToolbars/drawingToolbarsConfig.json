@@ -1,0 +1,11 @@
+{
+    "mainHtmlFilePath": "drawingToolbars/drawingToolbars.html",
+    "mainJavascriptFilePath": "drawingToolbars/drawingToolbars.min.js",
+    "desktopPosition": "topBottom",
+    "desktopEditOptionsToolbarSize": "34px",
+    "desktopDrawingOptionsToolbarSize": "34px",
+    "touchPosition": "topBottom",
+    "touchEditOptionsToolbarSize": "34px",
+    "touchDrawingOptionsToolbarSize": "44px",
+    "alwaysShowing": false
+}
